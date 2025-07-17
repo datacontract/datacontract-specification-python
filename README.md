@@ -55,30 +55,30 @@ data_contract = DataContractSpecification.from_string(data_contract_str)
 print(data_contract.to_yaml())
 ```
 
-### Convert Excel ODCS to YAML using Python
+### Convert Excel ODCS to YAML ODCS using Python
 
 ```python
 from datacontract_specification.converters.excel_to_yaml import convert_excel_to_yaml
 
 # Print YAML to screen
-yaml_output = convert_excel_to_yaml("specs/my_contract.odcs.xlsx")
+yaml_output = convert_excel_to_yaml("path/to/excel/file.xlsx")
 print(yaml_output)
 
 # Save YAML to file
-convert_excel_to_yaml("specs/my_contract.odcs.xlsx", "out/my_contract.yaml")
+convert_excel_to_yaml("path/to/excel/file.xlsx", "path/to/odcs_contract.yaml")
 ```
 
-### Convert YAML ODCS to DataContractSpecification (JSON) using Python
+### Convert YAML ODCS to DataContractSpecification (YAML) using Python
 
 ```python
 from datacontract_specification.converters.yaml_to_specification import convert_yaml_to_specification
 
-# Convert and get JSON output
-json_output = convert_yaml_to_specification("specs/my_contract.odcs.yaml")
-print(json_output)
+# Convert and get YAML output
+odcs_output = convert_yaml_to_specification("path/to/odcs_contract.yaml")
+print(odcs_output)
 
 # Save result to a file
-convert_yaml_to_specification("specs/my_contract.odcs.yaml", "out/my_contract.json")
+convert_yaml_to_specification("path/to/odcs_contract.yaml", "path/to/datacontract.yaml")
 ```
 
 ### Convert Excel directly to DataContractSpecification
@@ -87,9 +87,9 @@ convert_yaml_to_specification("specs/my_contract.odcs.yaml", "out/my_contract.js
 from datacontract_specification.converters.excel_to_specification import convert_excel_to_specification
 
 convert_excel_to_specification(
-    "specs/contract.odcs.xlsx",
-    "out/contract.odcs.yaml",
-    "out/contract.datacontract.json"
+    "path/to/excel/file.xlsx",
+    "path/to/odcs_contract.yaml",
+    "path/to/datacontract.yaml"
 )
 ```
 
