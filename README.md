@@ -55,6 +55,44 @@ data_contract = DataContractSpecification.from_string(data_contract_str)
 print(data_contract.to_yaml())
 ```
 
+### Convert Excel ODCS to YAML ODCS using Python
+
+```python
+from datacontract_specification.converters.excel_to_yaml import convert_excel_to_yaml
+
+# Print YAML to screen
+yaml_output = convert_excel_to_yaml("path/to/excel/file.xlsx")
+print(yaml_output)
+
+# Save YAML to file
+convert_excel_to_yaml("path/to/excel/file.xlsx", "path/to/odcs_contract.yaml")
+```
+
+### Convert YAML ODCS to DataContractSpecification (YAML) using Python
+
+```python
+from datacontract_specification.converters.yaml_to_specification import convert_yaml_to_specification
+
+# Convert and get YAML output
+odcs_output = convert_yaml_to_specification("path/to/odcs_contract.yaml")
+print(odcs_output)
+
+# Save result to a file
+convert_yaml_to_specification("path/to/odcs_contract.yaml", "path/to/datacontract.yaml")
+```
+
+### Convert Excel directly to DataContractSpecification
+
+```python
+from datacontract_specification.converters.excel_to_specification import convert_excel_to_specification
+
+convert_excel_to_specification(
+    "path/to/excel/file.xlsx",
+    "path/to/odcs_contract.yaml",
+    "path/to/datacontract.yaml"
+)
+```
+
 ## Development
 
 ```
