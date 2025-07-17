@@ -2,7 +2,7 @@ import os
 import pytest
 from datacontract_specification.converters.yaml_to_specification import convert_yaml_to_specification
 
-SAMPLE_YAML_PATH = "tests/fixtures/shipments-odcs.yaml"
+SAMPLE_YAML_PATH = "tests/fixtures/odcs_output.yaml"
 
 @pytest.mark.skipif(not os.path.exists(SAMPLE_YAML_PATH), reason="Test YAML file not found.")
 def test_yaml_to_spec_stdout():
