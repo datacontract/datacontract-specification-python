@@ -172,14 +172,16 @@ class Definition(pyd.BaseModel):
 class Quality(pyd.BaseModel):
     type: str | None = None
     description: str | None = None
+    metric: str | None = None
+    arguments: Dict[str, Any] | None = None
     query: str | None = None
     dialect: str | None = None
     mustBe: float | int | None = None
     mustNotBe: float | int | None = None
     mustBeGreaterThan: float | int | None = None
-    mustBeGreaterThanOrEqualTo: float | int | None = None
+    mustBeGreaterOrEqualTo: float | int | None = None
     mustBeLessThan: float | int | None = None
-    mustBeLessThanOrEqualTo: float | int | None = None
+    mustBeLessOrEqualTo: float | int | None = None
     mustBeBetween: List[float | int] = None
     mustNotBeBetween: List[float | int] = None
     engine: str | None = None

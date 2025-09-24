@@ -1,6 +1,6 @@
 [project]
 name = "datacontract-specification"
-version = "1.2.0" # in sync with spec
+version = "1.2.1" # in sync with spec
 description = "The Pydantic Model of the Data Contract Specification"
 readme = "README.md"
 authors = [
