@@ -179,9 +179,17 @@ class Quality(pyd.BaseModel):
     mustBe: float | int | None = None
     mustNotBe: float | int | None = None
     mustBeGreaterThan: float | int | None = None
+    mustBeGreaterThanOrEqualTo: float | int | None = pyd.Field(
+        default=None,
+        deprecated="Removed in Data Contract Specification v1.2.0. Use mustBeGreaterOrEqualTo instead.",
+    )
     mustBeGreaterOrEqualTo: float | int | None = None
     mustBeLessThan: float | int | None = None
     mustBeLessOrEqualTo: float | int | None = None
+    mustBeGreaterThanOrEqualTo: float | int | None = pyd.Field(
+        default=None,
+        deprecated="Removed in Data Contract Specification v1.2.1. Use mustBeLessOrEqualTo instead.",
+    )
     mustBeBetween: List[float | int] = None
     mustNotBeBetween: List[float | int] = None
     engine: str | None = None
