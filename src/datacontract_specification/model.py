@@ -186,7 +186,7 @@ class Quality(pyd.BaseModel):
     mustBeGreaterOrEqualTo: float | int | None = None
     mustBeLessThan: float | int | None = None
     mustBeLessOrEqualTo: float | int | None = None
-    mustBeGreaterThanOrEqualTo: float | int | None = pyd.Field(
+    mustBeLessThanOrEqualTo: float | int | None = pyd.Field(
         default=None,
         deprecated="Removed in Data Contract Specification v1.2.1. Use mustBeLessOrEqualTo instead.",
     )
