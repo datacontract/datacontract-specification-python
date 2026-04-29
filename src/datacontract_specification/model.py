@@ -121,6 +121,7 @@ class Server(pyd.BaseModel):
     driver: str | None = None
     storageAccount: str | None = None
     roles: List[ServerRole] = None
+    http_scheme: str | None = None
 
     model_config = pyd.ConfigDict(
         extra="allow",
